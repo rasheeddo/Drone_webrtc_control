@@ -204,3 +204,9 @@ python apm_data_publisher.py --console_port {2nd_port} --serial /dev/ttyUSB0:921
 # For testing we can use Ardupilot SITL instead, 
 # so specify --udp localhost:14550 instead of --serial
 ```
+
+## Web Console (User GCS)
+
+The web console application is showing a basic telemetry data such as latitude/longitude/altitude, attitude, voltage/current, and ETA in auto mode. There are just flight mode buttons and mission selector drop down. So this simplified GCS is suite for non-experience user of drone or Ardupilot stuff, so he/she wouldn't be overwhelming of a lot of buttons, graph, and so on. So a design is as simple as possible.
+
+![](images/console_structure.jpg)
