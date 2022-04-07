@@ -1,0 +1,24 @@
+https://ardupilot.org/dev/docs/using-sitl-for-ardupilot-testing.html
+
+cd ~/ardupilot/Tools/autotest
+
+sim_vehicle.py -v ArduCopter -f quad --map --console
+
+## Change mode
+mode <ALT_HOLD,GUIDED,AUTO,...>
+
+## ARM
+arm throttle
+
+## Parameters
+param save ./myparams.parm
+param set PARAMETERNAME VALUE
+param show SIM_*
+
+## RC
+rc 3 1500
+
+## Guided
+takeoff 50
+
+
