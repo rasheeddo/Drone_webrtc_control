@@ -109,8 +109,8 @@ telem_dict = {
         "mode": "MAN",
         "gps": "",
         "batt": {"volt": volt, "current": current}},
-	"id": _id	
-			}
+    "id": _id	
+    }
 ```
 
 This `telem_dict` would be dumped as json format and written to the text file called `console_telemetry.txt` and stored at the root directory of the project.
