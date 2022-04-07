@@ -100,19 +100,16 @@ The `apm_data_publisher.py` is a python script which connecting to Ardupilot by 
 
 ```
 telem_dict = {
-				"telemetry": {
-						"pos": {
-								"lat": lat, "lon": lon, "alt": alt_rel},
-						"att": {
-								"roll": roll, "pitch": pitch, "yaw": yaw},
-						"dist": {"travelled": travelled, "toHome": tohome, "toNextWp": 0.0},
-						"speed": {"air": airspeed, "ground": groundspeed},
-						"nav": {"nextWp": 0, "eta":[]},
-						"mode": "MAN",
-						"gps": "",
-						"batt": {"volt": volt, "current": current}
-						},
-				"id": _id	
+    "telemetry": {
+        "pos": {"lat": lat, "lon": lon, "alt": alt_rel},
+        "att": {"roll": roll, "pitch": pitch, "yaw": yaw},
+        "dist": {"travelled": travelled, "toHome": tohome, "toNextWp": 0.0},
+        "speed": {"air": airspeed, "ground": groundspeed},
+        "nav": {"nextWp": 0, "eta":[]},
+        "mode": "MAN",
+        "gps": "",
+        "batt": {"volt": volt, "current": current}},
+	"id": _id	
 			}
 ```
 
@@ -122,8 +119,8 @@ At the end of the while loop, the data on this file will be pushed to pseudo ser
 
 ```
 cmd1 = 'echo $(cat console_telemetry.txt) > {:s}'.format(CONSOLE_PORT)
-subprocess.call(cmd1, shell=True)				# for python2
-# subprocess.run(cmd1, shell=True, check=True)	# for python3
+subprocess.call(cmd1, shell=True)               # for python2
+# subprocess.run(cmd1, shell=True, check=True)  # for python3
 ```
 
 ### console_data_receiver node
